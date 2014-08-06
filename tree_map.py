@@ -1,9 +1,5 @@
 #! /usr/bin/env python
 
-## Adapted from BioPython Cookbook 6.2.1
-# Takes a fasta alignment as input and replaces names with seq0, seq1...
-# and converts to phylip.
-
 Usage = """
 tree_map.py <newick_tree> <mapping> 
 """
