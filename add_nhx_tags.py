@@ -9,12 +9,12 @@ import copy
 exceptions = {'sb': 'Pleurobrachia', 'ML': 'Mnemiopsis','c0': 'Acropora','GE': 'Porites'}
 
 def get_mapping(map_file):
-	"""Opens file with mapping info and returns dictionary"""
+	'''Opens file with mapping info and returns dictionary'''
 	with open(map_file) as mapping:
 		my_map = eval(mapping.read().strip('\n'))
 		return my_map
 		
-def add_labels(infile,map_file,format="nexus"):
+def add_labels(infile,map_file,format="newick"):
 	'''Read in gene tree and dictionary file to map genes to species. 
 	Add NHX comment section with species information to tips.'''
 	infilecore = infile.split('.')[0]
