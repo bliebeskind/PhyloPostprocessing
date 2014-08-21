@@ -39,15 +39,12 @@ if __name__ == '__main__':
 		Will use a text dictionary as an infile to map gene tree
 		names to species information:
 
-		add_nhx_tags.py <newick_tree> <mapping> 
+		add_nhx_tags.py <newick_tree> <mapping> <format>
 		"""
 	try:
 		infile = sys.argv[1]
 		mapping = sys.argv[2]
-		try:
-			format = sys.argv[3]
-		except IndexError:
-			format = 'nexus'
+		format = sys.argv[3]
 	except IndexError:
 		print Usage
 	add_labels(infile,mapping,format)
